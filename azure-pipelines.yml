@@ -15,6 +15,14 @@ steps:
     versionSpec: '20.x'
   displayName: 'Install Node.js'
 
+- task: InstallSSHKey@0
+  inputs:
+    knownHostsEntry: 'github.com'
+    sshKeySecureFile: 'SSH-Private-Key'
+    addEntryToConfig: true
+    configHostAlias: 'SSH'
+    configHostname: 'github.com'
+
 - script: |
     npm install
     npm run build
