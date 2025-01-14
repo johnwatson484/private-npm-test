@@ -25,5 +25,4 @@ steps:
 
 - script: |
     npm install
-    npm run build
   displayName: 'npm install'
